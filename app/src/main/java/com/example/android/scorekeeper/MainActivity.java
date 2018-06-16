@@ -11,9 +11,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int player1Score = 0;
     int player2Score = 0;
     boolean isturn1 = true;
-    Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, resetButton, startButton;
-    Button ready_player_1, ready_player_2, quit_player_1, quit_player_2;
-    EditText player1Name, player2Name;
+    Button button1;
+    Button button2;
+    Button button3;
+    Button button4;
+    Button button5;
+    Button button6;
+    Button button7;
+    Button button8;
+    Button button9;
+    Button button10;
+    Button resetButton;
+    Button startButton;
+    Button ready_player_1;
+    Button ready_player_2;
+    Button quit_player_1;
+    Button quit_player_2;
+    EditText player1Name;
+    EditText player2Name;
     TextView roundCount;
     int countNoOfRounds = 1;
     boolean isReadyPlayer_1 = false;
@@ -62,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player2Name = (EditText) findViewById(R.id.player_2_name);
 
         disableAllButtons();
-        }
+    }
 
 
     @Override
@@ -158,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             name2 = player2Name.getText().toString();
 
             if (player1Score > player2Score) {
-                playerturn.setText(name1 + " is the winner with score : " + player1Score + "\n" + name2 + " scored : " + player2Score);
+                playerturn.setText(name1 + " is the winner with score : " + player1Score + "\n" + name2 + " scored :"+ player2Score);
             } else if (player2Score > player1Score) {
                 playerturn.setText(name2 + " is the winner with score : " + player2Score + "\n" + name1 + " scored :" + player1Score);
             } else {
